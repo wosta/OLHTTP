@@ -139,3 +139,23 @@ TCP是主机对主机层的传输控制协议，提供可靠的连接服务，�
 第三次握手：客户端收到服务器的SYN＋ACK包，向服务器发送确认包ACK(ack=k+1)，此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。完成三次握手，客户端与服务器开始传送数据.
 
 ## URI URL URN
+* URI Uniform Resource Identifier 统一资源标识符 用来唯一标识互联网上的信息资源 包括URL和URN
+* URL Uniform Resource Locator  统一资源定位器 http://user:pass@host.com:80/path?query=string#hash  path->路由
+* URN Uniform Resource Name 统一资源名称
+
+URL肯定是一个URI，但是一个URI并不一定是一个URL，URL仅仅是URI的一种表现形式而已。两者的差距主要可以从命名上来区分，URI是资源标志符，所有他只要求具有"标识性"，而URL是和URI的主要区别就是，URL除了具有URI的“标识性”以外，还具有定位功能，可以用来描述资源的具体位置，还指明了获取资源所采用的协议。一个完整的URL包含协议名称，主机名称(IP或者域名)、端口号(没写端口号默认 为80端口)、路径和查询字符串这5个部分。比如：http：//www.microsoft.com:80/images/hello.png?type=png.这样一个url，上述的5个部分分别是：网络传输协议名称：http，主机：www.mcrosoft.com,端口号：80，路径：images/hello.png 查询字符串：type=png。
+
+　　看完了URL和URI的区别，我们在看看URN是什么东西。URN也是URL的一种表现形式，它和URL的区别就是与资源的位置无关，正式由于位置的无关性，被某个URN标识的资源在位置发生变化时，其URI可以保持不变。
+
+　　所以看来URL和URN都是URI的一种扩展，一种表现形式，URL和URN肯定是一个URI，但是URI不一定是URN或URL。
+
+[这里有个很好的🌰](https://www.cnblogs.com/52php/p/5677645.html)
+
+
+
+## HTTP报文
+!(报文格式)[./images/HTTP报文.png]
+## HTTP CODE
+* 定义服务器对请求的处理结果
+* 各个区间的code有各自的语义
+* 好的HTTP服务可以通过CODE判断结果
