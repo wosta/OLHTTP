@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    /**
+    *  Access to XMLHttpRequest at 'http://127.0.0.1:8887/' from origin 'http://localhost:8888' has been blocked by CORS policy: 
+    *    No 'Access-Control-Allow-Origin' header is present on the requested resource.
+    *  原因在于服务端没有设置允许跨域请求
+    */
+    var xhr = new XMLHttpRequest()
+    xhr.open('GET', 'http://127.0.0.1:8887')
+    xhr.send()
+  </script>
+
+  <!-- 这样写就跨域也不存在，原因在于浏览器允许你在标签上这样写 -->
+  <!-- <script src="http://127.0.0.1:8887/">
+  </script> -->
+</body>
+</html>
